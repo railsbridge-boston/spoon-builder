@@ -1,0 +1,72 @@
+# The VM image
+
+railsbridgevm-2016-04.box:
+  url: http://downloads.railsbridge.org/railsbridgevm-2016-04.box
+  checksum: bf587403271586ee061371d77ba7643c9f063157
+  platforms: vm
+
+# VirtualBox
+
+VirtualBox-4.3.36-105129-OSX.dmg:
+  url: http://download.virtualbox.org/virtualbox/4.3.36/VirtualBox-4.3.36-105129-OSX.dmg
+  checksum: 9aed27e542d747844049ea50b53e60a8623d3427
+  platforms:
+  - mac
+VirtualBox-4.3.36-105129-Win.exe:
+  url: http://download.virtualbox.org/virtualbox/4.3.36/VirtualBox-4.3.36-105129-Win.exe
+  checksum: 65c6959e931dac3bcade376c1302f3f1a8ec5616
+  platforms:
+  - win7
+  - winxp
+
+# Vagrant
+
+vagrant_1.8.1.dmg:
+  url: https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1.dmg
+  checksum: 1bda0aed9691145a97cb5a8ae7b3492cc5e15a03
+  platforms:
+  - mac
+vagrant_1.8.1.msi:
+  url: https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1.msi
+  checksum: 555ff7d6fefc1aa9cf3ea1533097abeb5d55e960
+  platforms:
+  - win7
+vagrant_1.5.4.msi:
+  url: https://releases.hashicorp.com/vagrant/1.5.4/vagrant_1.5.4.msi
+  checksum: d5e6c9c6df7e801f32ef4dbe9a4d500b398f4c6e
+  platforms:
+  - winxp
+
+# Git for Windows
+
+Git-2.8.0-32-bit.exe:
+  url: https://github.com/git-for-windows/git/releases/download/v2.8.0.windows.1/Git-2.8.0-32-bit.exe
+  checksum: 81b9b710f7c8af957ff07e7c1ba244cedcd2e7f2
+  platforms:
+  - win7
+  - winxp
+
+# Text editor
+
+Sublime Text 2.0.2.dmg:
+  url: https://download.sublimetext.com/Sublime%20Text%202.0.2.dmg
+  checksum: 14fba173566d4415f1881a38ad98cf22144f1f63
+  platforms: mac
+Sublime Text 2.0.2 Setup.exe:
+  url: https://download.sublimetext.com/Sublime%20Text%202.0.2a%20Setup.exe
+  checksum: 42237bddd675103fcc14597e0a8299e70ab588fd
+  platforms:
+  - win7
+  - winxp
+Sublime Text 2.0.2.tar.bz2:
+  url: https://download.sublimetext.com/Sublime%20Text%202.0.2.tar.bz2
+  checksum: 270e16f78be4e30e7ac3ba82d4e71746faaaa1cd
+  platforms:
+  - deb32
+  - rpm32
+Sublime Text 2.0.2 x64.tar.bz2:
+  url: https://download.sublimetext.com/Sublime%20Text%202.0.2%20x64.tar.bz2
+  checksum: c48f10369042d38b10fd3bc72f2b48bce60316d9
+  platforms:
+  - deb64
+  - rpm64

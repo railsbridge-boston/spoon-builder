@@ -1,0 +1,109 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+require 'digest/sha1'
+require 'open-uri'
+require 'fileutils'
+require 'pathname'
+require 'benchmark'
+
+FILE_MANIFEST_PATH = 'files.yml'
+PLATFORM_LAYOUT_PATH = 'layout.yml'
+CACHE_PATH = 'cache'
+USB_MASTER_PATH = 'usb-image'
+DEFAULT_USB_PATH = '/Volumes/RBB*'
+
+class SpoonBuilder
+  def initialize(paths)
+    @file_manifest = YAML.load_file(FILE_MANIFEST_PATH)
+    @platform_layout = YAML.load_file(PLATFORM_LAYOUT_PATH)
+    @usb_paths = paths.empty? ? Dir.glob(DEFAULT_USB_PATH) : paths
+  end
+
+  def run
+    cleanup_cache
+    download_files
+    build_usb_master
+    sync_usb_drives
+  end
+
+  def cleanup_cache
+    puts "Checking cache for old files..."
+    Dir.glob("#{CACHE_PATH}/*").each do |path|
+      file = File.basename(path)
+      unless @file_manifest.keys.include?(file)
+        print "I don't see #{file} in files.yml; it's probably from an older workshop. Delete it? "
+        answer = STDIN.gets.strip
+        FileUtils.rm(path) if answer.downcase.start_with?('y')
+      end
+    end
+  end
+
+  def download_files
+    puts "Updating cached files..."
+    @file_manifest.each do |file, info|
+      file_cache_path = "#{CACHE_PATH}/#{file}"
+      if checksum_matches?(file_cache_path, info['checksum'])
+        puts "- up to date: #{file_cache_path}"
+      else
+        puts "- need to download (this may take a minute): #{file_cache_path}"
+        IO.copy_stream(open(info['url']), file_cache_path)
+      end
+    end
+  end
+
+  def checksum_matches?(path, checksum)
+    File.exist?(path) && Digest::SHA1.hexdigest(File.read(path)) == checksum
+  end
+
+  def build_usb_master
+    puts "Creating layout for USB drives..."
+    FileUtils.rm_rf USB_MASTER_PATH
+    @platform_layout.each do |p_name, p_dir|
+      p_path = "#{USB_MASTER_PATH}/#{p_dir}"
+      FileUtils.mkdir_p(p_path)
+      @file_manifest.each do |file, info|
+        if info['platforms'].include?(p_name)
+          relative_symlink("#{CACHE_PATH}/#{file}", "#{p_path}/#{file}")
+        end
+      end
+    end
+  end
+
+  def relative_symlink(target, symlink)
+    unless File.exist?(symlink)
+      relative_target = Pathname.new(target).relative_path_from(Pathname.new(File.dirname(symlink)))
+      puts "- creating link: #{symlink} -> #{relative_target}"
+      FileUtils.ln_s(relative_target, symlink)
+    end
+  end
+
+  def sync_usb_drives
+    if @usb_paths.empty?
+      puts "Can't find any usb drives at #{DEFAULT_USB_PATH} -- are they plugged in?"
+      puts "If they are somewhere else on your computer (i.e. Linux), please specify them by path."
+    else
+      log_time 'synchronizing all RailsBridge USB drives' do
+        @usb_paths.each do |usb_path|
+          log_time usb_path do
+            system 'rsync', '-rtPh', '--del', '--modify-window=5', '--copy-links', "#{USB_MASTER_PATH}/", "#{usb_path}/"
+          end
+        end
+      end
+    end
+  end
+
+  def log_time(message)
+    elapsed = Benchmark.measure { yield }.real.round
+    minutes = elapsed / 60
+    seconds = elapsed % 60
+    end_message = "Finished #{message} in #{minutes} minutes #{seconds} seconds"
+    puts "#{end_message}!"
+    if system 'command -v say >/dev/null 2>&1'
+      system 'say', end_message
+    end
+  end
+
+end
+
+SpoonBuilder.new(ARGV).run

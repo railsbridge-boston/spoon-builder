@@ -1,0 +1,8 @@
+vm: Virtual Machine Image (all operating systems)
+mac: Programs to install on Mac OS X
+win7: Programs to install on Windows 7-10
+winxp: Programs to install on Windows XP-Vista
+deb32: Programs to install on Linux/32-bit (deb)
+deb64: Programs to install on Linux/64-bit (deb)
+rpm32: Programs to install on Linux/32-bit (rpm)
+rpm64: Programs to install on Linux/64-bit (rpm)
