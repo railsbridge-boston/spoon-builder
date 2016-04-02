@@ -36,6 +36,26 @@ vagrant_1.5.4.msi:
   checksum: d5e6c9c6df7e801f32ef4dbe9a4d500b398f4c6e
   platforms:
   - winxp
+vagrant_1.8.1_i686.deb:
+  url: https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_i686.deb
+  checksum: e932ea63783f4d02140bebf54c25ddf499e0881c
+  platforms:
+  - deb32
+vagrant_1.8.1_x86_64.deb:
+  url: https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb
+  checksum: 0cf25be35cfa57832c248d61d095f1e13eaa72a5
+  platforms:
+  - deb64
+vagrant_1.8.1_i686.rpm:
+  url: https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_i686.rpm
+  checksum: 6e9c42342673d1203ec8a4140173510626115308
+  platforms:
+  - rpm64
+vagrant_1.8.1_x86_64.rpm:
+  url: https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.rpm
+  checksum: 53f24a5f0823a49fa738599fc76ba207193cab08
+  platforms:
+  - rpm64
 
 # Git for Windows
 
