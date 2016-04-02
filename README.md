@@ -12,8 +12,9 @@ On Linux, pass the path to where your USB drives are mounted:
 # Getting started
 
 If you have an old USB drive, copy all the files on it (from all
-directories) to the `cache` directory. This will speed up the process so
-that you don't need to re-download any that haven't changed.
+directories) to the `cache` directory. This will speed up the process by
+preventing you from having to re-download any files that haven't
+changed.
 
 # Troubleshooting
 
