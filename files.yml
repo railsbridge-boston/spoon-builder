@@ -7,28 +7,28 @@ railsbridgevm-2016-04.box:
 
 # VirtualBox
 
-VirtualBox-4.3.36-105129-OSX.dmg:
-  url: http://download.virtualbox.org/virtualbox/4.3.36/VirtualBox-4.3.36-105129-OSX.dmg
-  checksum: 9aed27e542d747844049ea50b53e60a8623d3427
+VirtualBox-4.3.38-106717-OSX.dmg:
+  url: http://download.virtualbox.org/virtualbox/4.3.38/VirtualBox-4.3.38-106717-OSX.dmg
+  checksum: b631229eac37f902977655c6be662109511001f0
   platforms:
   - mac
-VirtualBox-4.3.36-105129-Win.exe:
-  url: http://download.virtualbox.org/virtualbox/4.3.36/VirtualBox-4.3.36-105129-Win.exe
-  checksum: 65c6959e931dac3bcade376c1302f3f1a8ec5616
+VirtualBox-4.3.38-106717-Win.exe:
+  url: http://download.virtualbox.org/virtualbox/4.3.38/VirtualBox-4.3.38-106717-Win.exe
+  checksum: cae5d1be4475373e411ca566fc2443930e017c0b
   platforms:
   - win7
   - winxp
 
 # Vagrant
 
-vagrant_1.8.1.dmg:
-  url: https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1.dmg
-  checksum: 1bda0aed9691145a97cb5a8ae7b3492cc5e15a03
+vagrant_1.8.4.dmg:
+  url: https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4.dmg
+  checksum: 474135b19e09eba18b3bb0d9dbf3762a3a4dd1f2
   platforms:
   - mac
-vagrant_1.8.1.msi:
-  url: https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1.msi
-  checksum: 555ff7d6fefc1aa9cf3ea1533097abeb5d55e960
+vagrant_1.8.4.msi:
+  url: https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4.msi
+  checksum: d43562fdb1286760a6152732f8bae6fcc29c0dae
   platforms:
   - win7
 vagrant_1.5.4.msi:
@@ -36,32 +36,32 @@ vagrant_1.5.4.msi:
   checksum: d5e6c9c6df7e801f32ef4dbe9a4d500b398f4c6e
   platforms:
   - winxp
-vagrant_1.8.1_i686.deb:
-  url: https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_i686.deb
-  checksum: e932ea63783f4d02140bebf54c25ddf499e0881c
+vagrant_1.8.4_i686.deb:
+  url: https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4_i686.deb
+  checksum: a8516d97accc4e7cc3f67584bfe6e0b8f98d9192
   platforms:
   - deb32
-vagrant_1.8.1_x86_64.deb:
-  url: https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb
-  checksum: 0cf25be35cfa57832c248d61d095f1e13eaa72a5
+vagrant_1.8.4_x86_64.deb:
+  url: https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4_x86_64.deb
+  checksum: c93767c841136b2247a64e7e78f33914c286a311
   platforms:
   - deb64
-vagrant_1.8.1_i686.rpm:
-  url: https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_i686.rpm
-  checksum: 6e9c42342673d1203ec8a4140173510626115308
+vagrant_1.8.4_i686.rpm:
+  url: https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4_i686.rpm
+  checksum: 180691653b2575c586e82857f3f5c4a9b6725423
   platforms:
   - rpm64
-vagrant_1.8.1_x86_64.rpm:
-  url: https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.rpm
-  checksum: 53f24a5f0823a49fa738599fc76ba207193cab08
+vagrant_1.8.4_x86_64.rpm:
+  url: https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4_x86_64.rpm
+  checksum: d2f7609734390d14f6c176bbbcdb5c53cb4b647e
   platforms:
   - rpm64
 
 # Git for Windows
 
-Git-2.8.0-32-bit.exe:
-  url: https://github.com/git-for-windows/git/releases/download/v2.8.0.windows.1/Git-2.8.0-32-bit.exe
-  checksum: 81b9b710f7c8af957ff07e7c1ba244cedcd2e7f2
+Git-2.9.0-32-bit.exe:
+  url: https://github.com/git-for-windows/git/releases/download/v2.9.0.windows.1/Git-2.9.0-32-bit.exe
+  checksum: a436e41741eaac994435ec798972550451e0aa83
   platforms:
   - win7
   - winxp
