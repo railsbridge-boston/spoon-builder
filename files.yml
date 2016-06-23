@@ -1,8 +1,8 @@
 # The VM image
 
-railsbridgevm-2016-04.box:
-  url: http://downloads.railsbridge.org/railsbridgevm-2016-04.box
-  checksum: bf587403271586ee061371d77ba7643c9f063157
+railsbridgevm-2016-06.box:
+  url: http://downloads.railsbridge.org/railsbridgevm-2016-06.box
+  checksum: 36fb57d136fe7ad238deb43675e3985cff8fe47f
   platforms: vm
 
 # VirtualBox
