@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'yaml'
-require 'digest/sha1'
+require 'digest/sha2'
 require 'open-uri'
 require 'fileutils'
 require 'pathname'
@@ -53,7 +53,7 @@ class SpoonBuilder
   end
 
   def checksum_matches?(path, checksum)
-    File.exist?(path) && Digest::SHA1.hexdigest(File.read(path)) == checksum
+    File.exist?(path) && Digest::SHA256.hexdigest(File.read(path)) == checksum
   end
 
   def build_usb_master
