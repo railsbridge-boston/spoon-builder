@@ -1,67 +1,67 @@
 # The VM image
 
-railsbridgevm-2016-06.box:
-  url: http://downloads.railsbridge.org/railsbridgevm-2016-06.box
-  checksum: 36fb57d136fe7ad238deb43675e3985cff8fe47f
+railsbridgevm-2016-09.box:
+  url: http://downloads.railsbridge.org/railsbridgevm-2016-09.box
+  checksum: cd247d8a84fa5484261cc1f8578d54c4d27babee24d133e31a80eb1f47827e1b
   platforms: vm
 
 # VirtualBox
 
-VirtualBox-4.3.38-106717-OSX.dmg:
-  url: http://download.virtualbox.org/virtualbox/4.3.38/VirtualBox-4.3.38-106717-OSX.dmg
-  checksum: b631229eac37f902977655c6be662109511001f0
+VirtualBox-4.3.40-110317-OSX.dmg:
+  url: http://download.virtualbox.org/virtualbox/4.3.40/VirtualBox-4.3.40-110317-OSX.dmg
+  checksum: eb70fc0f36844ced6dc7deeb30397866fbaffb4a8dfb6071b047e943cae6a312
   platforms:
   - mac
-VirtualBox-4.3.38-106717-Win.exe:
-  url: http://download.virtualbox.org/virtualbox/4.3.38/VirtualBox-4.3.38-106717-Win.exe
-  checksum: cae5d1be4475373e411ca566fc2443930e017c0b
+VirtualBox-4.3.40-110317-Win.exe:
+  url: http://download.virtualbox.org/virtualbox/4.3.40/VirtualBox-4.3.40-110317-Win.exe
+  checksum: 708f9db847cd2521a07033cfb6dc405d2f59102feb130e737b966f3a0f8762a7
   platforms:
   - win7
   - winxp
 
 # Vagrant
 
-vagrant_1.8.4.dmg:
-  url: https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4.dmg
-  checksum: 474135b19e09eba18b3bb0d9dbf3762a3a4dd1f2
+vagrant_1.8.5.dmg:
+  url: https://releases.hashicorp.com/vagrant/1.8.5/vagrant_1.8.5.dmg
+  checksum: f12879c4890c39ec49af95153a6151b19fd137cbdccf7db22470f31464b9dd56
   platforms:
   - mac
-vagrant_1.8.4.msi:
-  url: https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4.msi
-  checksum: d43562fdb1286760a6152732f8bae6fcc29c0dae
+vagrant_1.8.5.msi:
+  url: https://releases.hashicorp.com/vagrant/1.8.5/vagrant_1.8.5.msi
+  checksum: 28f30f1782b4ad790cd34544b762ee15dbdfb27807cba91f6197529cdf8e43fe
   platforms:
   - win7
 vagrant_1.5.4.msi:
   url: https://releases.hashicorp.com/vagrant/1.5.4/vagrant_1.5.4.msi
-  checksum: d5e6c9c6df7e801f32ef4dbe9a4d500b398f4c6e
+  checksum: 77a9f28da16471ca64abe1625417f8031ca11e9b94627e8eac2328a2b46ea43c
   platforms:
   - winxp
-vagrant_1.8.4_i686.deb:
-  url: https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4_i686.deb
-  checksum: a8516d97accc4e7cc3f67584bfe6e0b8f98d9192
+vagrant_1.8.5_i686.deb:
+  url: https://releases.hashicorp.com/vagrant/1.8.5/vagrant_1.8.5_i686.deb
+  checksum: 978b3bf384d7a4b636554eaf988976f3797e7e41801cf8e356ff7e0574c9fa9a
   platforms:
   - deb32
-vagrant_1.8.4_x86_64.deb:
-  url: https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4_x86_64.deb
-  checksum: c93767c841136b2247a64e7e78f33914c286a311
-  platforms:
-  - deb64
-vagrant_1.8.4_i686.rpm:
-  url: https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4_i686.rpm
-  checksum: 180691653b2575c586e82857f3f5c4a9b6725423
+vagrant_1.8.5_i686.rpm:
+  url: https://releases.hashicorp.com/vagrant/1.8.5/vagrant_1.8.5_i686.rpm
+  checksum: 25638b9484b2d2aca391dfb577c0ea5f2537d2cc962b71f19f070eecaae37a90
   platforms:
   - rpm64
-vagrant_1.8.4_x86_64.rpm:
-  url: https://releases.hashicorp.com/vagrant/1.8.4/vagrant_1.8.4_x86_64.rpm
-  checksum: d2f7609734390d14f6c176bbbcdb5c53cb4b647e
+vagrant_1.8.5_x86_64.deb:
+  url: https://releases.hashicorp.com/vagrant/1.8.5/vagrant_1.8.5_x86_64.deb
+  checksum: 30ee435c3358c6a835ea52cf710f4e50caa0e77cb721332132a2d3386a8745d9
+  platforms:
+  - deb64
+vagrant_1.8.5_x86_64.rpm:
+  url: https://releases.hashicorp.com/vagrant/1.8.5/vagrant_1.8.5_x86_64.rpm
+  checksum: ae53198af8beb490cd733a17a62de454adde867bdb9436bf95e03f1adc3f9c4a
   platforms:
   - rpm64
 
 # Git for Windows
 
-Git-2.9.0-32-bit.exe:
-  url: https://github.com/git-for-windows/git/releases/download/v2.9.0.windows.1/Git-2.9.0-32-bit.exe
-  checksum: a436e41741eaac994435ec798972550451e0aa83
+Git-2.10.0-32-bit.exe:
+  url: https://github.com/git-for-windows/git/releases/download/v2.10.0.windows.1/Git-2.10.0-32-bit.exe
+  checksum: 5d565da086a0b7aca46face8439146826ddd51ffeb286845be89fe4c2713d63c
   platforms:
   - win7
   - winxp
@@ -70,23 +70,23 @@ Git-2.9.0-32-bit.exe:
 
 Sublime Text 2.0.2.dmg:
   url: https://download.sublimetext.com/Sublime%20Text%202.0.2.dmg
-  checksum: 14fba173566d4415f1881a38ad98cf22144f1f63
+  checksum: 906e71e19ae5321f80e7cf42eab8355146d8f2c3fd55be1f7fe5c62c57165add
   platforms: mac
 Sublime Text 2.0.2 Setup.exe:
   url: https://download.sublimetext.com/Sublime%20Text%202.0.2a%20Setup.exe
-  checksum: 42237bddd675103fcc14597e0a8299e70ab588fd
+  checksum: 89a593d9fc5f12557c8dbfad010fbd909e7a04cd60037ad6e204b2cb457e9418
   platforms:
   - win7
   - winxp
 Sublime Text 2.0.2.tar.bz2:
   url: https://download.sublimetext.com/Sublime%20Text%202.0.2.tar.bz2
-  checksum: 270e16f78be4e30e7ac3ba82d4e71746faaaa1cd
+  checksum: 07338e041cfb348938fa8069f0aad3b5b43c319b7ec564ffff1489796f2dcf08
   platforms:
   - deb32
   - rpm32
 Sublime Text 2.0.2 x64.tar.bz2:
   url: https://download.sublimetext.com/Sublime%20Text%202.0.2%20x64.tar.bz2
-  checksum: c48f10369042d38b10fd3bc72f2b48bce60316d9
+  checksum: 01baed30d66432e30002a309ff0393967be1daba5cce653e43bba6bd6c38ab84
   platforms:
   - deb64
   - rpm64
