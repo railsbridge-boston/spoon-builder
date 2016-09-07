@@ -46,7 +46,7 @@ class SpoonBuilder
       if checksum_matches?(file_cache_path, info['checksum'])
         puts "- up to date: #{file_cache_path}"
       else
-        puts "- need to download (this may take a minute): #{file_cache_path}"
+        puts "- need to download (this may take a minute, it's working...): #{file_cache_path}"
         IO.copy_stream(open(info['url']), file_cache_path)
       end
     end
