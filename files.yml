@@ -21,14 +21,14 @@ VirtualBox-4.3.40-110317-Win.exe:
 
 # Vagrant
 
-vagrant_1.8.5.dmg:
-  url: https://releases.hashicorp.com/vagrant/1.8.5/vagrant_1.8.5.dmg
-  checksum: f12879c4890c39ec49af95153a6151b19fd137cbdccf7db22470f31464b9dd56
+vagrant_1.9.1.dmg:
+  url: https://releases.hashicorp.com/vagrant/1.9.1/vagrant_1.9.1.dmg
+  checksum: 17191ff7a1d796aa89c558b45c706288275dade6a65e2b219c2efa0e54c02ef7
   platforms:
   - mac
-vagrant_1.8.5.msi:
-  url: https://releases.hashicorp.com/vagrant/1.8.5/vagrant_1.8.5.msi
-  checksum: 28f30f1782b4ad790cd34544b762ee15dbdfb27807cba91f6197529cdf8e43fe
+vagrant_1.9.1.msi:
+  url: https://releases.hashicorp.com/vagrant/1.9.1/vagrant_1.9.1.msi
+  checksum: db1fef59dd15ac90b6f5cfad20af7e15eccd814556a81f46e5422386166789a6
   platforms:
   - win7
 vagrant_1.5.4.msi:
@@ -36,24 +36,24 @@ vagrant_1.5.4.msi:
   checksum: 77a9f28da16471ca64abe1625417f8031ca11e9b94627e8eac2328a2b46ea43c
   platforms:
   - winxp
-vagrant_1.8.5_i686.deb:
-  url: https://releases.hashicorp.com/vagrant/1.8.5/vagrant_1.8.5_i686.deb
-  checksum: 978b3bf384d7a4b636554eaf988976f3797e7e41801cf8e356ff7e0574c9fa9a
+vagrant_1.9.1_i686.deb:
+  url: https://releases.hashicorp.com/vagrant/1.9.1/vagrant_1.9.1_i686.deb
+  checksum: eb273f04412219d0f69c54f94790f14a47e667d988254225ad83bfcbb8e4099d
   platforms:
   - deb32
-vagrant_1.8.5_i686.rpm:
-  url: https://releases.hashicorp.com/vagrant/1.8.5/vagrant_1.8.5_i686.rpm
-  checksum: 25638b9484b2d2aca391dfb577c0ea5f2537d2cc962b71f19f070eecaae37a90
+vagrant_1.9.1_i686.rpm:
+  url: https://releases.hashicorp.com/vagrant/1.9.1/vagrant_1.9.1_i686.rpm
+  checksum: ded8f2c3b98251c97956edff4c17d48d68f47f6cc11bbc156e5b44449a2659ba
   platforms:
   - rpm64
-vagrant_1.8.5_x86_64.deb:
-  url: https://releases.hashicorp.com/vagrant/1.8.5/vagrant_1.8.5_x86_64.deb
-  checksum: 30ee435c3358c6a835ea52cf710f4e50caa0e77cb721332132a2d3386a8745d9
+vagrant_1.9.1_x86_64.deb:
+  url: https://releases.hashicorp.com/vagrant/1.9.1/vagrant_1.9.1_x86_64.deb
+  checksum: d006d6227e049725b64d8ba3967f0c82460a403ff40230515c93134d58723150
   platforms:
   - deb64
-vagrant_1.8.5_x86_64.rpm:
-  url: https://releases.hashicorp.com/vagrant/1.8.5/vagrant_1.8.5_x86_64.rpm
-  checksum: ae53198af8beb490cd733a17a62de454adde867bdb9436bf95e03f1adc3f9c4a
+vagrant_1.9.1_x86_64.rpm:
+  url: https://releases.hashicorp.com/vagrant/1.9.1/vagrant_1.9.1_x86_64.rpm
+  checksum: ee1d7e6b49d93df0e01412bc14700b9a13d0a2d98175e160321e4ff235f30422
   platforms:
   - rpm64
 
