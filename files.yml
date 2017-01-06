@@ -7,14 +7,14 @@ railsbridgevm-2016-09.box:
 
 # VirtualBox
 
-VirtualBox-4.3.40-110317-OSX.dmg:
-  url: http://download.virtualbox.org/virtualbox/4.3.40/VirtualBox-4.3.40-110317-OSX.dmg
-  checksum: eb70fc0f36844ced6dc7deeb30397866fbaffb4a8dfb6071b047e943cae6a312
+VirtualBox-5.0.30-112061-OSX.dmg:
+  url: http://download.virtualbox.org/virtualbox/5.0.30/VirtualBox-5.0.30-112061-OSX.dmg
+  checksum: 030a054e49bf4edde7730fd7f5bbbc8be47d6ab06c345da70e1b5a124414f5d0
   platforms:
   - mac
-VirtualBox-4.3.40-110317-Win.exe:
-  url: http://download.virtualbox.org/virtualbox/4.3.40/VirtualBox-4.3.40-110317-Win.exe
-  checksum: 708f9db847cd2521a07033cfb6dc405d2f59102feb130e737b966f3a0f8762a7
+VirtualBox-5.0.30-112061-Win.exe:
+  url: http://download.virtualbox.org/virtualbox/5.0.30/VirtualBox-5.0.30-112061-Win.exe
+  checksum: 2c333c56b85aeac771600533e8169cef8d2eeed08ed3775f551582c857bdc0ba
   platforms:
   - win7
   - winxp
