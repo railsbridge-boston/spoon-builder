@@ -59,9 +59,9 @@ vagrant_1.9.1_x86_64.rpm:
 
 # Git for Windows
 
-Git-2.10.0-32-bit.exe:
-  url: https://github.com/git-for-windows/git/releases/download/v2.10.0.windows.1/Git-2.10.0-32-bit.exe
-  checksum: 5d565da086a0b7aca46face8439146826ddd51ffeb286845be89fe4c2713d63c
+Git-2.11.0-32-bit.exe:
+  url: https://github.com/git-for-windows/git/releases/download/v2.11.0.windows.1/Git-2.11.0-32-bit.exe
+  checksum: 2a6083479538c4fe454336660fce96346ee3cf46f99ce08a666d4635539239d7
   platforms:
   - win7
   - winxp
