@@ -29,7 +29,7 @@ class SpoonBuilder
   end
 
   def cleanup_cache
-    puts "Checking cache for old files..."
+    puts "Looking for old files to remove"
     Dir.glob("#{CACHE_PATH}/*").each do |path|
       file = File.basename(path)
       unless @file_manifest.keys.include?(file)
@@ -41,7 +41,7 @@ class SpoonBuilder
   end
 
   def download_files
-    puts "Updating cached files..."
+    puts "Checking and updating files in cache"
     @file_manifest.each do |file, info|
       file_cache_path = "#{CACHE_PATH}/#{file}"
       if checksum_matches?(file_cache_path, info['checksum'])
@@ -59,11 +59,12 @@ class SpoonBuilder
 
   def build_usb_master
     return if ENV['CONCURRENT_SPOONS'] && File.exist?(USB_MASTER_PATH)
-    puts "Creating layout for USB drives..."
+    puts "Deleting and recreating #{USB_MASTER_PATH} directory"
     FileUtils.rm_rf USB_MASTER_PATH
     FileUtils.mkdir_p USB_MASTER_PATH
     MAC_CRUFT.each {|c| FileUtils.touch "#{USB_MASTER_PATH}/#{c}" }
     @platform_layout.each do |p_name, p_dir|
+      puts "Linking files for #{p_name}"
       p_path = "#{USB_MASTER_PATH}/#{p_dir}"
       FileUtils.mkdir_p(p_path)
       @file_manifest.each do |file, info|
@@ -89,6 +90,9 @@ class SpoonBuilder
     else
       log_time 'synchronizing all RailsBridge USB drives' do
         @usb_paths.each do |usb_path|
+          puts "-" * 80
+          puts "Synchronizing #{usb_path}"
+          puts "-" * 80
           log_time usb_path do
             system 'rsync', '-rtPh', '--del', '--modify-window=5', '--copy-links', "#{USB_MASTER_PATH}/", "#{usb_path}/"
           end
