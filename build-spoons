@@ -12,6 +12,7 @@ PLATFORM_LAYOUT_PATH = 'layout.yml'
 CACHE_PATH = 'cache'
 USB_MASTER_PATH = 'usb-image'
 DEFAULT_USB_PATH = '/Volumes/RBB*'
+MAC_CRUFT = %w[.Spotlight-V100 .Trashes .fseventsd]
 
 class SpoonBuilder
   def initialize(paths)
@@ -59,6 +60,8 @@ class SpoonBuilder
   def build_usb_master
     puts "Creating layout for USB drives..."
     FileUtils.rm_rf USB_MASTER_PATH
+    FileUtils.mkdir_p USB_MASTER_PATH
+    MAC_CRUFT.each {|c| FileUtils.touch "#{USB_MASTER_PATH}/#{c}" }
     @platform_layout.each do |p_name, p_dir|
       p_path = "#{USB_MASTER_PATH}/#{p_dir}"
       FileUtils.mkdir_p(p_path)
