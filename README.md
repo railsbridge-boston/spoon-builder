@@ -16,6 +16,11 @@ directory (don't copy folders containing the files, but copy the individual
 files into `cache`) . This will speed up the process by preventing you from
 having to re-download any files that haven't changed.
 
+If you have an updated USB handy, this can be accomplished with (assuming it's
+labeled `RBB01`):
+
+    find /Volumes/RBB01/* -type f -exec rsync '{}' cache ';'
+
 # Troubleshooting
 
 If you get the error:
