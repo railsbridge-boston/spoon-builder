@@ -58,6 +58,7 @@ class SpoonBuilder
   end
 
   def build_usb_master
+    return if ENV['CONCURRENT_SPOONS'] && File.exist?(USB_MASTER_PATH)
     puts "Creating layout for USB drives..."
     FileUtils.rm_rf USB_MASTER_PATH
     FileUtils.mkdir_p USB_MASTER_PATH
